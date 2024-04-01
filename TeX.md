@@ -1,9 +1,10 @@
 ## Grundlegdene Elemente ##
 
 Absatz um zb. 0.25 cm 
+
 	\\[0.25cm]
 
-## Bild auf voller Breite eibinden ##
+## Bild auf voller Breite einbinden ##
 
 	\begin{figure}[!htbp]
 		\centering
@@ -57,26 +58,32 @@ Absatz um zb. 0.25 cm
 
 ## Überschrift & Inhaltsverzeichnis ##
 Standard Kapitel
+
 	\section{<Titel>}
 	\subsection{<Titel>}
 	\subsubsection{<Titel>}
 
-Titel ohne einfügen im Inhaltsverzeichnis
+Titel ohne Einfügen im Inhaltsverzeichnis
+
 	\section*{<Titel>}
 	\subsection*{<Titel>}
 	\subsubsection*{<Titel>}
 
-Zwanghaftes einfügen ohne Numierung
+Zwanghaftes einfügen ohne Nummerung
+
 	\addcontentsline{toc}{section}{<Titel>}
 
 ## Quellen ##
 Standard mäßig
-	'\cite[<Zusatz>]{<bibte>}'
+
+	\cite[<Zusatz>]{<bibte>}
 
 Fußzeilenzitate
-	'\footcite[<Zusatz>]{<bibte>}'
 
-Auf der Hauptseite folgendes Einfügen, dann kann der Tag "\quelle" an allen elemnete einen Quellenverweis erzeugen:
+	\footcite[<Zusatz>]{<bibte>}
+
+Auf der Hauptseite folgendes Einfügen, dann kann der Tag "\quelle" an allen Elementen einen Quellenverweis erzeugen:
+
 	% Erzeugt eine Quelle am Bild
 	\newcommand*{\quelle}{%
 		\raggedleft
@@ -84,4 +91,25 @@ Auf der Hauptseite folgendes Einfügen, dann kann der Tag "\quelle" an allen ele
 	}
 
 Der zu nutzende Verweis:
-	'\quelle{\cite[<Zusatz>]{<bibte>}}'
+
+	\quelle{\cite[<Zusatz>]{<bibte>}}
+
+## Py hilfe für die Übersicht ##
+Beim Nutzen des folgenden Codes werden alle nicht in dem Array angegebenen Elemente in dem Ordner gelöscht. Damit lässt sich bei einem Hänger TeX neu starten und auch mal etwas Ordnung in den Wusel von erzeugten Dateien herstellen.
+
+	import os
+
+	def delete_files_with_extensions(directory, extensions):
+		for root, dirs, files in os.walk(directory):
+			for file in files:
+				_, ext = os.path.splitext(file)
+				if ext.lower() not in extensions:
+					file_path = os.path.join(root, file)
+					os.remove(file_path)
+					print(f"Deleted: {file_path}")
+
+	target_directory = os.path.dirname(os.path.abspath(__file__))
+	extensions_not_to_delete = [".tex", ".pdf", ".py", ".png", ".jpg", ".bib"]
+
+	print(target_directory)   
+	delete_files_with_extensions(target_directory, extensions_not_to_delete)
