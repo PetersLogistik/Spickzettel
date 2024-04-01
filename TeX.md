@@ -71,10 +71,10 @@ Zwanghaftes einfügen ohne Numierung
 
 ## Quellen ##
 Standard mäßig
-	\cite[<Zusatz>]{<bibte>}
+	'\cite[<Zusatz>]{<bibte>}'
 
 Fußzeilenzitate
-	\footcite[<Zusatz>]{<bibte>}
+	'\footcite[<Zusatz>]{<bibte>}'
 
 Auf der Hauptseite folgendes Einfügen, dann kann der Tag "\quelle" an allen elemnete einen Quellenverweis erzeugen:
 	% Erzeugt eine Quelle am Bild
@@ -84,4 +84,4 @@ Auf der Hauptseite folgendes Einfügen, dann kann der Tag "\quelle" an allen ele
 	}
 
 Der zu nutzende Verweis:
-	\quelle{\cite[<Zusatz>]{<bibte>}}
+	'\quelle{\cite[<Zusatz>]{<bibte>}}'
