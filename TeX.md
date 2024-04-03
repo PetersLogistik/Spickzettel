@@ -22,6 +22,10 @@ Absatz um zb. 0.25 cm
 		\label{fig:<short>}
 	\end{wrapfigure}
 
+## Bilder nebeneinander ##
+
+https://texfragen.de/bilder_nebeneinander
+
 ## Tabelle ##
 
 	\begin{table}[!htbp]
