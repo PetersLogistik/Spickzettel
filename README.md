@@ -13,7 +13,7 @@ Auf den verlinkten Seiten werden von mir wiederholt genutzte Code-Blöcke zusamm
 		<tr>
 			<td>LaTeX</td>
 			<td>
-				<a href="/PetersLogistik/Spickzettel/TeX.md">Klick hier</a>
+				<a href="/PetersLogistik/Spickzettel/blob/main/TeX.md">Klick hier</a>
 			</td>
 		</tr>
 		<tr>
@@ -31,12 +31,12 @@ Auf den verlinkten Seiten werden von mir wiederholt genutzte Code-Blöcke zusamm
 		<tr>
 			<td>Postgresql</td>
 			<td>
-				<a href="/PetersLogistik/Spickzettel/psql.md">Klick hier</a>
+				<a href="/PetersLogistik/Spickzettel/blob/main/psql.md">Klick hier</a>
 			</td>
 		</tr>
 			<td>Docker</td>
 			<td>
-				<a href="/PetersLogistik/Spickzettel/docker.md">Klick hier</a>
+				<a href="/PetersLogistik/Spickzettel/blob/main/docker.md">Klick hier</a>
 			</td>
 		</tr>
 	</tbody>
