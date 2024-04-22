@@ -13,30 +13,30 @@ Auf den verlinkten Seiten werden von mir wiederholt genutzte Code-Blöcke zusamm
 		<tr>
 			<td>LaTeX</td>
 			<td>
-				<a href="/PetersLogistik/Spickzettel/blob/main/TeX.md">Klick hier</a>
+				<a href="/TeX.md">Klick hier</a>
 			</td>
 		</tr>
 		<tr>
 			<td>Python</td>
 			<td>
-				<a href="/PetersLogistik/Spickzettel/">Klick hier</a>
+				<a href="/">Klick hier</a>
 			</td>
 		</tr>
 		<tr>
 			<td>R</td>
 			<td>
-				<a href="/PetersLogistik/Spickzettel/">Klick hier</a>
+				<a href="/">Klick hier</a>
 			</td>
 		</tr>
 		<tr>
 			<td>Postgresql</td>
 			<td>
-				<a href="/PetersLogistik/Spickzettel/blob/main/psql.md">Klick hier</a>
+				<a href="/psql.md">Klick hier</a>
 			</td>
 		</tr>
 			<td>Docker</td>
 			<td>
-				<a href="/PetersLogistik/Spickzettel/blob/main/docker.md">Klick hier</a>
+				<a href="/docker.md">Klick hier</a>
 			</td>
 		</tr>
 	</tbody>
