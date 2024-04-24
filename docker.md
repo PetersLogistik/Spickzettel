@@ -2,17 +2,36 @@
 
 ## Container ##
 
+Conatiner Starten
+
+	 docker run -d <Containername>:<ggf.Version>
+
+Laufende Container anzeigen
+	docker container ls
+	docker ps
+
+logs eines Conatiners anzeigen lassen. Das `-f` bedingt, dass die logs fortlaufend angezeigt werden. 
+
+	docekr logs -f <Container-ID>
+
 Anhalten eines Containers
 
-	docker stop <Containername>
+	docker stop <Container-ID>
 
 Löschen eines Containers
 
-	docker rm <Containername>
+	docker rm <Container-ID>
 
 Löscht **alle** Container
 
 	docker container prune 
+
+##Images##
+Erstellen eines Images
+	
+	docker image build -t <Name>:<Version> /<standort-der-Dockerdatei>
+	Bsp.
+	docker image build -t db_abfrage:0.1 /home/db_pi/db_abfrage
 
 ----------
 
