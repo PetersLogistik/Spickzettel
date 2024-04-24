@@ -25,7 +25,7 @@ Auf den verlinkten Seiten werden von mir wiederholt genutzte Code-Blöcke zusamm
 		<tr>
 			<td>R</td>
 			<td>
-				<a href="/">Klick hier</a>
+				<a href="/r.md">Klick hier</a>
 			</td>
 		</tr>
 		<tr>
