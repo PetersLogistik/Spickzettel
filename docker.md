@@ -4,7 +4,7 @@
 
 Conatiner Starten
 
-	 docker run -d <Containername>:<ggf.Version>
+	 docker run -d <Containername>:<ggf. Version>
 
 Laufende Container anzeigen
 	docker container ls
@@ -29,7 +29,7 @@ Löscht **alle** Container
 ##Images##
 Erstellen eines Images
 	
-	docker image build -t <Name>:<Version> /<standort-der-Dockerdatei>
+	docker image build -t <Name>:<ggf. Version> /<standort-der-Dockerdatei>
 	Bsp.
 	docker image build -t db_abfrage:0.1 /home/db_pi/db_abfrage
 
