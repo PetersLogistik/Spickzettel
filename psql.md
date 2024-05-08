@@ -26,9 +26,9 @@ Mit der Option `\du` werden alle Rollen und Benutzer angezeigt.
 	-- Rolle read_only
 	CREATE ROLE read_only;
 	grant connect on database betrieb to read_only;
-	grant usage on schema daten, netz, public, vrs to read_only;
-	grant select on all TABLES in SCHEMA daten, netz, public, vrs TO read_only;
-	alter DEFAULT privileges in SCHEMA daten, netz, public, vrs GRANT SELECT on TABLES TO read_only;
+	grant usage on schema daten, netz, public, vrs, vk_mod_red to read_only;
+	grant select on all TABLES in SCHEMA daten, netz, public, vrs, vk_mod_red TO read_only;
+	alter DEFAULT privileges in SCHEMA daten, netz, public, vrs, vk_mod_red GRANT SELECT on TABLES TO read_only;
 	
 	-- rolle read_write
 	CREATE ROLE read_write;
