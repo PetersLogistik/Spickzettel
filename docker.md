@@ -27,15 +27,21 @@ Löscht **alle** Container
 	docker container prune 
 
 ##Images##
+
 Erstellen eines Images
 	
 	docker image build -t <Name>:<ggf. Version> /<standort-der-Dockerdatei>
 	Bsp.
 	docker image build -t db_abfrage:0.1 /home/db_pi/db_abfrage
 
+Löschen eines Images
+	
+	docker rmi <Image-Id>
+
 ----------
 
 ## Volumes ##
+
 ![Filesystem](https://docs.docker.com/storage/images/types-of-mounts-volume.webp?w=450&h=300)
 
 - idr. ist volumes das go-to für die Sicherung von Daten außerhalb der Containerwelt 
