@@ -44,11 +44,14 @@ Folgende install-Befehle haben ohne Fehlermeldung bei mir funktioniert:
 <h5>Ursachen für CPU-Nutzung statt GPU</h5>
 - GPU wird nicht erkannt
 
-    import tensorflow as tf
-    print("GPU available:", tf.config.list_physical_devices('GPU'))
-
     import torch
-    print("GPU available:", torch.cuda.is_available())
+    print("CUDA verfügbar:", torch.cuda.is_available())
+    print("GPU-Name:", torch.cuda.get_device_name(0) if torch.cuda.is_available() else "Keine GPU")
+
+    import tensorflow as tf
+    print("CUDA verfügbar:", tf.test.is_built_with_cuda())
+    print("GPU verfügbar:", tf.config.list_physical_devices('GPU'))
+
 
 - Falsche Framework-Version
 - Fehlende CUDA-Unterstützung
@@ -56,3 +59,18 @@ Folgende install-Befehle haben ohne Fehlermeldung bei mir funktioniert:
     OpenTrafficCam könnte explizit so eingestellt sein, dass die CPU genutzt wird. Überprüfe die Konfigurationsdateien oder den Code, ob es eine Einstellung wie `use_gpu` gibt, die aktiviert werden muss.
 
 Wenn sich keine Lösung abzeichnet, alles einmal updaten und PC neustarten.
+Ein weiterer Ansatz ist, dass die Virtuelle die GPU Schnittstelle nicht ansprechen kann. So ist die Umgebung zu aktivieren und die oben benannten Prüfungen erneut durchzuführen. So können auch differente Versionen in der Umgebung zu einem Verlust führen.
+Prüfen auf Path- Einträge in der Konsole:
+
+    echo %PATH%
+    echo %CUDA_HOME%
+
+Wenn die Pfade nicht angezeigt werden: 
+
+    # Pfade bitte entsprechend anpassen!
+    set PATH=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.6\bin;%PATH%
+    set CUDA_HOME=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.6
+
+Füge Systempfade zur venv hinzu: Die virtuelle Umgebung kann die Systempfade automatisch übernehmen, wenn du sie mit der Option --system-site-packages erstellst:
+
+    python3 -m venv venv --system-site-packages
