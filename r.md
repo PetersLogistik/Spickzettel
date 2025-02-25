@@ -1,5 +1,6 @@
-#R
-##Kopfzeilen##
+# R
+## Kopfzeilen
+
 	#set working directory
 	setwd(dirname(rstudioapi::getSourceEditorContext()$path))
 	#database connection
@@ -11,7 +12,8 @@
 	#Anzeigen der Daten
 	tibble::glimpse(df)
 
-##Plots##
+## Plots
+
 	ggplot(head(df), aes(reorder(-sum_ew,ags),sum_ew)) +
 	  geom_col() +
 	  geom_text(aes(label = format(sum_ew, big.mark = ".", scientific = FALSE)), vjust = -0.5, size=5) +
@@ -23,7 +25,8 @@
 	  theme_bw()
 	  #theme(plot.title = element_text(size = 20, face = "bold", hjust = 0.5, vjust = 2))
 
-##Weiteres##
+## Weiteres
+
 	#Grafik Speichern
 	png(file="<name.png>", width=210, height=148, units="mm", res=300)
 		<Plot>
